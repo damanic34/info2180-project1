@@ -1,11 +1,292 @@
-/* Add your CSS to this file */
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
-    font-size: 16px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
 }
 
 .container {
     margin: 0 auto;
-    max-width: 960px;
+    max-width: 1200px;
+    width: 90%;
+}
+
+
+/* HEADER */
+
+header {
+    background-color: white;
+    font-size: 18px;
+    padding: 20px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 18px;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    padding: 0;
+    margin: 0;
+}
+
+header nav a {
+    color: #6b7280;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    color: #5A67D8;
+}
+
+
+/* HERO OVERVIEW */
+
+.overview-hero {
+    background-color: #E2E8F0;
+    padding: 60px 0;
+}
+
+.overview-hero .container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.overview-hero-image {
+    flex: 1;
+}
+
+.overview-hero-image img {
     width: 100%;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+}
+
+.overview-hero-text {
+    flex: 1;
+}
+
+
+/* LEARN ABOUT */
+
+.learn-about {
+    padding: 60px 0;
+}
+
+.learn-about h2 {
+    font-size: 24px;
+    color: #48BB78;
+    margin-bottom: 30px;
+}
+
+.learn-about .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.learn-about .card {
+    border: 1px solid #E2E8F0;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.learn-about .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.learn-about .card-body {
+    padding: 15px;
+}
+
+.learn-about .card-body h3 {
+    color: #48BB78;
+    font-size: 21px;
+}
+
+.learn-about .card-body p {
+    margin-bottom: 0;
+}
+
+
+/* COVID-19 TESTING PROGRAMME */
+
+.testing {
+    background-color: #4A5568;
+    color: white;
+    padding: 50px 0;
+}
+
+.testing .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.testing-description {
+    flex: 1;
+}
+
+.testing-desciption {
+    flex: 1;
+}
+
+.testing .cta a {
+    display: inline-block;
+    background-color: #48BB78;
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+}
+
+
+/* RECENT STORIES */
+
+.stories {
+    padding: 60px 0;
+}
+
+.stories h2 {
+    color: #5A67D8;
+}
+
+.stories article {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 35px;
+}
+
+.stories article img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.stories h3 {
+    font-size: 18px;
+}
+
+.stories a {
+    color: #5A67D8;
+    text-decoration: none;
+}
+
+
+/* NEWSLETTER */
+
+.newsletter {
+    background-color: #48BB78;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.newsletter form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.newsletter input {
+    padding: 12px;
+    width: 300px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.newsletter button {
+    background-color: #5A67D8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 25px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.newsletter .message {
+    margin-top: 15px;
+}
+
+
+/* FOOTER */
+
+footer {
+    background-color: #4A5568;
+    color: white;
+    padding: 25px 0;
+    text-align: center;
+}
+
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 768px) {
+
+    header .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    header nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .overview-hero .container {
+        flex-direction: column;
+    }
+
+    .overview-hero-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    .learn-about .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .testing .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .stories article {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .newsletter form {
+        flex-direction: column;
+    }
+
+    .newsletter input {
+        width: 100%;
+        max-width: 350px;
+    }
 }
